@@ -1,7 +1,7 @@
 # -----------------------------------------------------------
 # menu.py
-# v.1.0
-# Updated: 20201025
+# v.1.1
+# Updated: 20201029
 # -----------------------------------------------------------
 
 
@@ -36,4 +36,21 @@ nuke.menu('Nodes').addCommand("Other/Backdrop", "nuke.createNode('BackdropNode')
 
 # -----------------------------------------------------------
 # CONFIGURE HOTKEYS ))))))))))))))))))))))))))))))))))))) END
+# -----------------------------------------------------------
+
+
+# -----------------------------------------------------------
+# CREATE GIZMO TOOLBAR (((((((((((((((((((((((((((((((( START
+# -----------------------------------------------------------
+# Create Menu
+gizmoToolbar = nuke.menu('Nodes')
+gizmoMenu = gizmoToolbar.addMenu('Gizmos', icon = 'HansIcon.png')
+
+# Add gizmos to menu list
+gizmoMenu.addCommand('Additive Keyer', "nuke.createNode('AdditiveKeyer2')")
+gizmoMenu.addCommand('Despill Madness', "nuke.createNode('DespillMadness')")
+gizmoMenu.addCommand('TX Bloom', "nuke.createNode('TX_Bloom')")
+
+# -----------------------------------------------------------
+# CREATE GIZMO TOOLBAR )))))))))))))))))))))))))))))))))) END
 # -----------------------------------------------------------
