@@ -42,14 +42,28 @@ nuke.menu('Nodes').addCommand("Other/Backdrop", "nuke.createNode('BackdropNode')
 # -----------------------------------------------------------
 # CREATE GIZMO TOOLBAR (((((((((((((((((((((((((((((((( START
 # -----------------------------------------------------------
-# Create Menu
+# Create Gizmo Menu
 gizmoToolbar = nuke.menu('Nodes')
 gizmoMenu = gizmoToolbar.addMenu('Gizmos', icon = 'HansIcon.png')
 
-# Add gizmos to menu list
-gizmoMenu.addCommand('Additive Keyer', "nuke.createNode('AdditiveKeyer2')")
-gizmoMenu.addCommand('Despill Madness', "nuke.createNode('DespillMadness')")
-gizmoMenu.addCommand('TX Bloom', "nuke.createNode('TX_Bloom')")
+# Filter SubMenu
+filterMenu = gizmoMenu.addMenu('Filter', index = 10)
+filterMenu.addCommand('Aberration', "nuke.createNode('Aberration')")
+# Already accessible via NukeSurvivalToolkit
+#filterMenu.addCommand('BM Optical Glow', "nuke.createNode('bm_OpticalGlow')")
+filterMenu.addCommand('TX Bloom', "nuke.createNode('TX_Bloom')")
+
+# Keyer SubMenu
+keyerMenu = gizmoMenu.addMenu('Keyer', index = 20)
+keyerMenu.addCommand('Additive Keyer', "nuke.createNode('AdditiveKeyer2')")
+# Already accessible via NukeSurvivalToolkit
+# Icon includes as part of Nukepedia download
+#keyerMenu.addCommand('aP Matte', "nuke.createNode('aPMatte'), icon = 'aPMatte.png'")
+keyerMenu.addCommand('Despill Madness', "nuke.createNode('DespillMadness')")
+
+# Transform SubMenu
+transformMenu = gizmoMenu.addMenu('Transform', index = 30)
+transformMenu.addCommand('ARRI Lens Distortion', "nuke.createNode('ArriLensDistortion')")
 
 # -----------------------------------------------------------
 # CREATE GIZMO TOOLBAR )))))))))))))))))))))))))))))))))) END
