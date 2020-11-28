@@ -6,6 +6,8 @@ nuke.pluginAddPath('./Icons/')
 nuke.pluginAddPath('./NukeSurvivalToolkit/NukeSurvivalToolkit/')
 # Cryptomatte Plugin cloned from GitHub, path identified for source.
 nuke.pluginAddPath('./Cryptomatte/nuke')
+# PixelFudger Plugin accessed via Nukepedia, path identified for source.
+nuke.pluginAddPath('./Gizmos/PixelFudger/')
 
 # Required for Cryptomatte Plugin; Path defined above via NUKE_Path.
 # Ref docs for more info about plugin.
